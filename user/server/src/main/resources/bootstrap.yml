@@ -1,0 +1,12 @@
+spring:
+    application:
+        name: user
+    cloud:
+        nacos:
+            config:
+                file-extension: yaml
+                server-addr: 127.0.0.1:8848
+                prefix: user
+    profiles:
+      active: local
+

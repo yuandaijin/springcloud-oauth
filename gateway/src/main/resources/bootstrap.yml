@@ -1,0 +1,15 @@
+spring:
+    application:
+        name: gateway
+    cloud:
+        nacos:
+            config:
+                file-extension: yaml
+                server-addr: 127.0.0.1:8848
+        gateway:
+                  discovery: #是否与服务发现组件进行结合，通过 serviceId转发到具体的服务实例。默认为false，设为true便开启通过服务中心的自动根据 serviceId 创建路由的功能。
+                    locator:
+                      enabled: true
+                      lowerCaseServiceId : true #统一服务名小写 不支持大写
+    profiles:
+      active: local

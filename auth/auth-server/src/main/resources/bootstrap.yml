@@ -1,0 +1,13 @@
+spring:
+    main:
+        #解决sprngboot升级2.1.*后feign调用多个server同一个name的启动失败问题
+        allow-bean-definition-overriding: true
+    application:
+        name: auth
+    cloud:
+        nacos:
+            config:
+                file-extension: yaml
+                server-addr: 127.0.0.1:8848
+    profiles:
+      active: local
